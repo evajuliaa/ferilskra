@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>[Eva Júlía Birgisdóttir] – Ferilskrá</title>
+  <title>Eva Júlía Birgisdóttir – Ferilskrá</title>
   <style>
     :root {
       --bg: #f4f5f7;
@@ -115,20 +115,12 @@
     }
 
     @media (max-width: 900px) {
-      .card {
-        padding: 24px 20px;
-      }
-      .grid {
-        grid-template-columns: minmax(0, 1fr);
-      }
-      .contact {
-        text-align: left;
-      }
+      .card { padding: 24px 20px; }
+      .grid { grid-template-columns: minmax(0, 1fr); }
+      .contact { text-align: left; }
     }
 
-    section + section {
-      margin-top: 24px;
-    }
+    section + section { margin-top: 24px; }
 
     h2 {
       font-size: 1.05rem;
@@ -155,9 +147,7 @@
       border-bottom: 1px solid var(--border);
     }
 
-    .item:last-child {
-      border-bottom: none;
-    }
+    .item:last-child { border-bottom: none; }
 
     .item-header {
       display: flex;
@@ -166,9 +156,7 @@
       align-items: baseline;
     }
 
-    .item-title {
-      font-weight: 600;
-    }
+    .item-title { font-weight: 600; }
 
     .item-meta {
       font-size: 0.86rem;
@@ -184,22 +172,6 @@
     .item-desc {
       margin-top: 4px;
       font-size: 0.9rem;
-    }
-
-    .tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 6px;
-      margin-top: 6px;
-    }
-
-    .tag {
-      font-size: 0.8rem;
-      padding: 4px 8px;
-      border-radius: 999px;
-      background: #f3f4f6;
-      border: 1px solid #e5e7eb;
-      white-space: nowrap;
     }
 
     .pill-list {
@@ -227,10 +199,7 @@
       border: 1px dashed #e5e7eb;
     }
 
-    ul {
-      margin-left: 1.1rem;
-      margin-top: 2px;
-    }
+    ul { margin-left: 1.1rem; margin-top: 2px; }
 
     ul li {
       font-size: 0.9rem;
@@ -245,62 +214,73 @@
     }
   </style>
 </head>
+
 <body>
   <main class="page">
     <div class="card">
-      <!-- Eva Júlía -->
+
+      <!-- HAUS -->
       <header>
         <div class="name-block">
-          <h1>[Eva Júlía Birgisdóttir]</h1>
-          <p>[Háskólanemi í rekstrarverkfræði]</p>
+          <h1>Eva Júlía Birgisdóttir</h1>
+          <p>Háskólanemi í rekstrarverkfræði</p>
           <div class="badge">
             <span class="badge-dot"></span>
             <span>Ferilskrá – Netútgáfa</span>
           </div>
         </div>
+
         <div class="contact">
-          <div><strong>Netfang:</strong> <a href="mailto:[NETFANG]">[NETFANG]</a></div>
-          <div><strong>Sími:</strong> [6124456]</div>
-          <div><strong>Staðsetning:</strong> [Garðabær]</div>
-          -->
+          <div><strong>Netfang:</strong> <a href="mailto:evebirgisdottir@gmail.com">evebirgisdottir@gmail.com</a></div>
+          <div><strong>Sími:</strong> 6124456</div>
+          <div><strong>Staðsetning:</strong> Garðabær</div>
         </div>
       </header>
 
       <div class="grid">
-        <!-- VINSTRA SÚLAN – REYNSLA & MENNTUN -->
         <div>
-          <!-- Um mig -->
+
+          <!-- UM MIG -->
           <section>
-            <div class="section-header">
-              <h2>Um mig</h2>
-            </div>
+            <div class="section-header"><h2>Um mig</h2></div>
             <div class="about">
               <p>
-                [Ég er lausnamiðuð, dugleg og vinnusöm. Fyrri störf hafa kennt mér margt líkt og góða samskiptahæfni, að læra hratt á flókin kerfi og samvinnu. Ég sinni ávalt öllum verkefnum sem ég tek fyrir hendi með vandvirkni og sætti mig ekki við niðurstöður nema af bestu gæðum.]
+                Ég hef mikla reynslu af sölu- og þjónustustörfum og er mjög félagslynd með
+                framúrskarandi samskiptahæfni. Sumarstarfið hjá Billboard ehf. sem
+                birtingarstjóri var sérstaklega lærdómsríkt þar sem ég lærði hratt á flókin
+                kerfi, vann krefjandi verkefni og náði góðu samstarfi við fjölbreytt fyrirtæki.
+                Einnig starfaði ég hjá Arctica Finance í fyrirtækjaráðgjöf þar sem ég tók þátt í
+                fjölbreyttum verkefnum tengdum íslenskum fyrirtækjum og eflt
+                færni mína í Microsoft Office og gagnasöfnun.
+                Ég hef hlotið verðlaun fyrir námsárangur, þar á meðal í stærðfræði og
+                stærðfræðikeppnum. Ég útskrifaðist úr Verslunarskóla Íslands með
+                ágætiseinkunn og hef fengið mjög góðar einkunnir í háskóla.
+                Ég er jákvæð, kurteis, þolinmóð og afar skipulögð. Ég nýt þess að vinna
+                bæði sjálfstætt og í teymi og tek öllum verkefnum af ábyrgð og metnaði.
               </p>
             </div>
           </section>
 
-          <!-- Starfsreynsla -->
+          <!-- STARFSREYNSLA -->
           <section>
             <div class="section-header">
               <h2>Starfsreynsla</h2>
-              <span>[Nýjasta starfið efst]</span>
+              <span>Nýjasta starfið efst</span>
             </div>
 
             <!-- Arctica Finance -->
             <article class="item">
               <div class="item-header">
                 <div>
-                  <div class="item-title">[Sumarstarf í fyrirtækjaráðgjöf]</div>
-                  <div class="item-sub">[Arctica Finance] · [Katrínartún 2]</div>
+                  <div class="item-title">Sumarstarf í fyrirtækjaráðgjöf</div>
+                  <div class="item-sub">Arctica Finance · Katrínartún 2</div>
                 </div>
-                <div class="item-meta">[2025 - ]</div>
+                <div class="item-meta">2025 –</div>
               </div>
               <div class="item-desc">
                 <ul>
-                  <li>[Helsta verkefni - finna gögn og upplýsingar sem nýttust í verkefnum,]</li>
-                  <li>[Önnur ábyrgð - uppsetning á kynningum í Powerpoint, gögn sett í snyrtileg Excel skjöl]</li>
+                  <li>Gagnasöfnun og greining fyrir verkefni tengd íslenskum fyrirtækjum.</li>
+                  <li>Uppsetning kynninga og Excel-skjala.</li>
                 </ul>
               </div>
             </article>
@@ -309,15 +289,15 @@
             <article class="item">
               <div class="item-header">
                 <div>
-                  <div class="item-title">[Starfsmaður í félagsmiðstöð]</div>
-                  <div class="item-sub">[Garðalundur] · [Ásgarður]</div>
+                  <div class="item-title">Starfsmaður í félagsmiðstöð</div>
+                  <div class="item-sub">Garðalundur · Ásgarður</div>
                 </div>
-                <div class="item-meta">[2025-]</div>
+                <div class="item-meta">2025 –</div>
               </div>
               <div class="item-desc">
                 <ul>
-                  <li>[Helstu verkefni - eftirlit á unglingum í félagsmiðstöð]</li>
-                  <li>[Önnur ábyrgð - skipulag á viðburðum]</li>
+                  <li>Eftirlit með unglingum í félagsmiðstöð.</li>
+                  <li>Skipulag og framkvæmd viðburða.</li>
                 </ul>
               </div>
             </article>
@@ -326,66 +306,145 @@
             <article class="item">
               <div class="item-header">
                 <div>
-                  <div class="item-title">[Sumarstarf sem birtingastjóri]</div>
-                  <div class="item-sub">[Billboard EHF] · [Ármúli 25]</div>
+                  <div class="item-title">Birtingastjóri – sumarstarf</div>
+                  <div class="item-sub">Billboard ehf. · Ármúli 25</div>
                 </div>
-                <div class="item-meta">[2023-2024]</div>
+                <div class="item-meta">2023–2024</div>
               </div>
               <div class="item-desc">
                 <ul>
-                  <li>[Helstu verkefni - sjá um birtingar á auglýsingum fyrirtækja, búa til auglýsingaplön fyrir fyrirtæki]</li>
-                  <li>[Önnur ábyrgð - eftirlit á gæðum og skipulagi]</li>
+                  <li>Sá um birtingar á auglýsingum og gerð birtingaráætlana.</li>
+                  <li>Yfirumsjón með gæðum og skipulagi verkefna.</li>
                 </ul>
               </div>
             </article>
 
-            <!-- Bættu við fleiri STARF-block ef þarf -->
-          </section>
-          
+            <!-- Íslenski barinn -->
+            <article class="item">
+              <div class="item-header">
+                <div>
+                  <div class="item-title">Þjónn</div>
+                  <div class="item-sub">Íslenski barinn</div>
+                </div>
+                <div class="item-meta">2023</div>
+              </div>
+              <div class="item-desc">
+                <ul>
+                  <li>Þjónusta við viðskiptavini á lifandi og krefjandi vinnustað.</li>
+                </ul>
+              </div>
+            </article>
 
-          <!-- Menntun -->
+            <!-- Icewear -->
+            <article class="item">
+              <div class="item-header">
+                <div>
+                  <div class="item-title">Afgreiðslustarf</div>
+                  <div class="item-sub">Icewear</div>
+                </div>
+                <div class="item-meta">2022–2023</div>
+              </div>
+              <div class="item-desc">
+                <ul>
+                  <li>Afgreiðsla, þjónusta og sala til ferðamanna.</li>
+                </ul>
+              </div>
+            </article>
+
+            <!-- Kirkjuból -->
+            <article class="item">
+              <div class="item-header">
+                <div>
+                  <div class="item-title">Leikskólaliði – sumarstörf</div>
+                  <div class="item-sub">Leikskólinn Kirkjuból</div>
+                </div>
+                <div class="item-meta">2020, 2021, 2022</div>
+              </div>
+              <div class="item-desc">
+                <ul>
+                  <li>Umönnun barna og stuðningur við daglegar leikskóladeildir.</li>
+                </ul>
+              </div>
+            </article>
+
+            <!-- Vinnuskóli -->
+            <article class="item">
+              <div class="item-header">
+                <div>
+                  <div class="item-title">Sumarstarf</div>
+                  <div class="item-sub">Vinnuskólinn í Garðabæ</div>
+                </div>
+                <div class="item-meta">2019</div>
+              </div>
+              <div class="item-desc">
+                <ul>
+                  <li>Ýmis þjónustu- og verkleg störf í umhverfisdeild.</li>
+                </ul>
+              </div>
+            </article>
+
+            <!-- Domino's -->
+            <article class="item">
+              <div class="item-header">
+                <div>
+                  <div class="item-title">Afgreiðsla & símaver</div>
+                  <div class="item-sub">Domino’s</div>
+                </div>
+                <div class="item-meta">2019–2021</div>
+              </div>
+              <div class="item-desc">
+                <ul>
+                  <li>Afgreiðsla, símsvörun og þjónusta við viðskiptavini.</li>
+                </ul>
+              </div>
+            </article>
+
+          </section>
+
+          <!-- MENNTUN -->
           <section>
-            <div class="section-header">
-              <h2>Menntun</h2>
-            </div>
+            <div class="section-header"><h2>Menntun</h2></div>
 
-            <!-- Háskólu Reykjavíkur -->
+            <!-- HR -->
             <article class="item">
               <div class="item-header">
                 <div>
-                  <div class="item-title">[Rekstrarverkfræði]</div>
-                  <div class="item-sub">[Háskóli Reykjavíkur] · [Menntavegur 1]</div>
+                  <div class="item-title">Rekstrarverkfræði</div>
+                  <div class="item-sub">Háskóli Reykjavíkur · Menntavegur 1</div>
                 </div>
-                <div class="item-meta">[2024-]</div>
+                <div class="item-meta">2024–</div>
               </div>
               <div class="item-desc">
-                [Nám í rekstrarverkfræði þar sem mikil áhersla er á rekstur og fjármál fyrirtækja, ákvarðanatökur, forritun og stærðfræði]
+                Nám með áherslu á rekstur fyrirtækja, fjármál, forritun,
+                viðskiptagreiningu og stærðfræði.
               </div>
             </article>
 
-            <!-- Verslunarskóli Íslands -->
+            <!-- VÍ -->
             <article class="item">
               <div class="item-header">
                 <div>
-                  <div class="item-title">[Náttúru-líffræðibraut]</div>
-                  <div class="item-sub">[Verslunarskóli Íslands] · [Ofanleiti 1]</div>
+                  <div class="item-title">Náttúru- og líffræðibraut</div>
+                  <div class="item-sub">Verslunarskóli Íslands · Ofanleiti 1</div>
                 </div>
-                <div class="item-meta">[2021-2024]</div>
+                <div class="item-meta">2021–2024</div>
               </div>
               <div class="item-desc">
-                [Útskrifuð með stúdentspróf af náttúrufræðibraut í Verslunarskóla Íslands. Útskrifast með ágætiseinkunn ásamt því að sinna mörgum nemendastörfum í skólanum.]
+                Útskrifuð með stúdentspróf. Tók þátt í fjölda nefnda og félagsstarfa
+                og hlaut verðlaun fyrir námsárangur.
               </div>
             </article>
+
           </section>
+
         </div>
 
-        <!-- HÆGRI SÚLAN – HÆFNI, TUNGUMÁL, NÁMSKEIÐ -->
+        <!-- HÆGRI SÚLA -->
         <div>
-          <!-- Hæfni -->
+
+          <!-- HÆFNI -->
           <section>
-            <div class="section-header">
-              <h2>Hæfni</h2>
-            </div>
+            <div class="section-header"><h2>Hæfni</h2></div>
 
             <div class="item">
               <div class="item-title">Tæknileg færni</div>
@@ -394,7 +453,6 @@
                 <span class="pill">PowerPoint</span>
                 <span class="pill">Excel</span>
                 <span class="pill">Gervigreind</span>
-                <span class="pill">Blabla</span>
               </div>
             </div>
 
@@ -411,9 +469,7 @@
 
           <!-- Tungumál -->
           <section>
-            <div class="section-header">
-              <h2>Tungumál</h2>
-            </div>
+            <div class="section-header"><h2>Tungumál</h2></div>
 
             <article class="item">
               <div class="item-header">
@@ -432,32 +488,33 @@
             <article class="item">
               <div class="item-header">
                 <div class="item-title">Danska</div>
-                <div class="item-meta">Með stúdentspróf, ágæt</div>
+                <div class="item-meta">Góð, með stúdentspróf</div>
               </div>
             </article>
           </section>
 
-          <!-- Skólastarfsemi -->
+          <!-- Nefndarstörf -->
           <section>
             <div class="section-header">
               <h2>Nefndarstörf við Verslunarskóla Íslands</h2>
             </div>
 
-
-
             <article class="item">
               <div class="item-title">Nefndarstörf</div>
               <div class="item-desc">
-               Formaður blaðanefndar Kvasis, Nefndameðlimur, markaðssetningarstjóri og svo formaður Nemendamótsnefndar VÍ, Stjórnarmeðlimur og kjörstjórnarmeðlimur nemendfélags Verslunarskóla Íslands (NFVI)
+                Formaður blaðanefndar Kvasis, nefndarmeðlimur, markaðssetningarstjóri og síðar formaður Nemendamótsnefndar VÍ.  
+                Stjórnarmeðlimur og kjörstjórnarmeðlimur Nemendafélags VÍ (NFVÍ).
               </div>
             </article>
           </section>
+
         </div>
       </div>
 
       <div class="footer-note">
         Meðmælendur veittir sé þess óskað.
       </div>
+
     </div>
   </main>
 </body>

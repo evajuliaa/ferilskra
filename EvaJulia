@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="is">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>[Eva Júlía Birgisdóttir] – Ferilskrá</title>
+  <style>
+    :root {
+      --bg: #f4f5f7;
+      --card-bg: #ffffff;
+      --accent: #2563eb;
+      --accent-soft: #dbeafe;
+      --text-main: #111827;
+      --text-muted: #6b7280;
+      --border: #e5e7eb;
+      --radius-lg: 16px;
+      --radius-xl: 24px;
+      --shadow-soft: 0 18px 45px rgba(15, 23, 42, 0.12);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        sans-serif;
+      background: radial-gradient(circle at top, #e0f2fe 0, #f4f5f7 42%, #f4f5f7 100%);
+      color: var(--text-main);
+      line-height: 1.6;
+      padding: 32px 16px;
+    }
+
+    .page {
+      max-width: 980px;
+      margin: 0 auto;
+    }
+
+    .card {
+      background: var(--card-bg);
+      border-radius: var(--radius-xl);
+      box-shadow: var(--shadow-soft);
+      padding: 32px 28px;
+      border: 1px solid rgba(148, 163, 184, 0.15);
+    }
+
+    header {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px 32px;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 28px;
+    }
+
+    .name-block h1 {
+      font-size: clamp(2rem, 3vw, 2.4rem);
+      font-weight: 700;
+      letter-spacing: 0.03em;
+    }
+
+    .name-block p {
+      color: var(--text-muted);
+      margin-top: 4px;
+      font-size: 0.98rem;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 12px;
+      border-radius: 999px;
+      background: var(--accent-soft);
+      color: var(--accent);
+      font-size: 0.78rem;
+      margin-top: 8px;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-weight: 600;
+    }
+
+    .badge-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 999px;
+      background: var(--accent);
+    }
+
+    .contact {
+      text-align: right;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    .contact a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    .contact a:hover {
+      text-decoration: underline;
+    }
+
+    .contact div + div {
+      margin-top: 2px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: minmax(0, 2fr) minmax(0, 1.2fr);
+      gap: 32px;
+    }
+
+    @media (max-width: 900px) {
+      .card {
+        padding: 24px 20px;
+      }
+      .grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+      .contact {
+        text-align: left;
+      }
+    }
+
+    section + section {
+      margin-top: 24px;
+    }
+
+    h2 {
+      font-size: 1.05rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 10px;
+    }
+
+    .section-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 12px;
+    }
+
+    .section-header span {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+    }
+
+    .item {
+      padding: 12px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .item:last-child {
+      border-bottom: none;
+    }
+
+    .item-header {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      align-items: baseline;
+    }
+
+    .item-title {
+      font-weight: 600;
+    }
+
+    .item-meta {
+      font-size: 0.86rem;
+      color: var(--text-muted);
+    }
+
+    .item-sub {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-top: 2px;
+    }
+
+    .item-desc {
+      margin-top: 4px;
+      font-size: 0.9rem;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 6px;
+    }
+
+    .tag {
+      font-size: 0.8rem;
+      padding: 4px 8px;
+      border-radius: 999px;
+      background: #f3f4f6;
+      border: 1px solid #e5e7eb;
+      white-space: nowrap;
+    }
+
+    .pill-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 8px;
+    }
+
+    .pill {
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: var(--accent-soft);
+      color: var(--accent);
+      font-size: 0.8rem;
+      font-weight: 500;
+    }
+
+    .about {
+      font-size: 0.94rem;
+      color: var(--text-main);
+      background: #f9fafb;
+      border-radius: var(--radius-lg);
+      padding: 12px 14px;
+      border: 1px dashed #e5e7eb;
+    }
+
+    ul {
+      margin-left: 1.1rem;
+      margin-top: 2px;
+    }
+
+    ul li {
+      font-size: 0.9rem;
+      margin-bottom: 2px;
+    }
+
+    .footer-note {
+      margin-top: 20px;
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <div class="card">
+      <!-- Eva Júlía -->
+      <header>
+        <div class="name-block">
+          <h1>[Eva Júlía Birgisdóttir]</h1>
+          <p>[Háskólanemi í rekstrarverkfræði]</p>
+          <div class="badge">
+            <span class="badge-dot"></span>
+            <span>Ferilskrá – Netútgáfa</span>
+          </div>
+        </div>
+        <div class="contact">
+          <div><strong>Netfang:</strong> <a href="mailto:[NETFANG]">[NETFANG]</a></div>
+          <div><strong>Sími:</strong> [6124456]</div>
+          <div><strong>Staðsetning:</strong> [Garðabær]</div>
+          -->
+        </div>
+      </header>
+
+      <div class="grid">
+        <!-- VINSTRA SÚLAN – REYNSLA & MENNTUN -->
+        <div>
+          <!-- Um mig -->
+          <section>
+            <div class="section-header">
+              <h2>Um mig</h2>
+            </div>
+            <div class="about">
+              <p>
+                [Ég er lausnamiðuð, dugleg og vinnusöm. Fyrri störf hafa kennt mér margt líkt og góða samskiptahæfni, að læra hratt á flókin kerfi og samvinnu. Ég sinni ávalt öllum verkefnum sem ég tek fyrir hendi með vandvirkni og sætti mig ekki við niðurstöður nema af bestu gæðum.]
+              </p>
+            </div>
+          </section>
+
+          <!-- Starfsreynsla -->
+          <section>
+            <div class="section-header">
+              <h2>Starfsreynsla</h2>
+              <span>[Nýjasta starfið efst]</span>
+            </div>
+
+            <!-- Arctica Finance -->
+            <article class="item">
+              <div class="item-header">
+                <div>
+                  <div class="item-title">[Sumarstarf í fyrirtækjaráðgjöf]</div>
+                  <div class="item-sub">[Arctica Finance] · [Katrínartún 2]</div>
+                </div>
+                <div class="item-meta">[2025 - ]</div>
+              </div>
+              <div class="item-desc">
+                <ul>
+                  <li>[Helsta verkefni - finna gögn og upplýsingar sem nýttust í verkefnum,]</li>
+                  <li>[Önnur ábyrgð - uppsetning á kynningum í Powerpoint, gögn sett í snyrtileg Excel skjöl]</li>
+                </ul>
+              </div>
+            </article>
+
+            <!-- Garðalundur -->
+            <article class="item">
+              <div class="item-header">
+                <div>
+                  <div class="item-title">[Starfsmaður í félagsmiðstöð]</div>
+                  <div class="item-sub">[Garðalundur] · [Ásgarður]</div>
+                </div>
+                <div class="item-meta">[2025-]</div>
+              </div>
+              <div class="item-desc">
+                <ul>
+                  <li>[Helstu verkefni - eftirlit á unglingum í félagsmiðstöð]</li>
+                  <li>[Önnur ábyrgð - skipulag á viðburðum]</li>
+                </ul>
+              </div>
+            </article>
+
+            <!-- Billboard -->
+            <article class="item">
+              <div class="item-header">
+                <div>
+                  <div class="item-title">[Sumarstarf sem birtingastjóri]</div>
+                  <div class="item-sub">[Billboard EHF] · [Ármúli 25]</div>
+                </div>
+                <div class="item-meta">[2023-2024]</div>
+              </div>
+              <div class="item-desc">
+                <ul>
+                  <li>[Helstu verkefni - sjá um birtingar á auglýsingum fyrirtækja, búa til auglýsingaplön fyrir fyrirtæki]</li>
+                  <li>[Önnur ábyrgð - eftirlit á gæðum og skipulagi]</li>
+                </ul>
+              </div>
+            </article>
+
+            <!-- Bættu við fleiri STARF-block ef þarf -->
+          </section>
+          
+
+          <!-- Menntun -->
+          <section>
+            <div class="section-header">
+              <h2>Menntun</h2>
+            </div>
+
+            <!-- Háskólu Reykjavíkur -->
+            <article class="item">
+              <div class="item-header">
+                <div>
+                  <div class="item-title">[Rekstrarverkfræði]</div>
+                  <div class="item-sub">[Háskóli Reykjavíkur] · [Menntavegur 1]</div>
+                </div>
+                <div class="item-meta">[2024-]</div>
+              </div>
+              <div class="item-desc">
+                [Nám í rekstrarverkfræði þar sem mikil áhersla er á rekstur og fjármál fyrirtækja, ákvarðanatökur, forritun og stærðfræði]
+              </div>
+            </article>
+
+            <!-- Verslunarskóli Íslands -->
+            <article class="item">
+              <div class="item-header">
+                <div>
+                  <div class="item-title">[Náttúru-líffræðibraut]</div>
+                  <div class="item-sub">[Verslunarskóli Íslands] · [Ofanleiti 1]</div>
+                </div>
+                <div class="item-meta">[2021-2024]</div>
+              </div>
+              <div class="item-desc">
+                [Útskrifuð með stúdentspróf af náttúrufræðibraut í Verslunarskóla Íslands. Útskrifast með ágætiseinkunn ásamt því að sinna mörgum nemendastörfum í skólanum.]
+              </div>
+            </article>
+          </section>
+        </div>
+
+        <!-- HÆGRI SÚLAN – HÆFNI, TUNGUMÁL, NÁMSKEIÐ -->
+        <div>
+          <!-- Hæfni -->
+          <section>
+            <div class="section-header">
+              <h2>Hæfni</h2>
+            </div>
+
+            <div class="item">
+              <div class="item-title">Tæknileg færni</div>
+              <div class="pill-list">
+                <span class="pill">Microsoft Word</span>
+                <span class="pill">PowerPoint</span>
+                <span class="pill">Excel</span>
+                <span class="pill">Gervigreind</span>
+                <span class="pill">Blabla</span>
+              </div>
+            </div>
+
+            <div class="item">
+              <div class="item-title">Almenn færni</div>
+              <ul>
+                <li>Stundvís og skipulögð</li>
+                <li>Góð samskiptahæfni og þjónustulund</li>
+                <li>Vön teymisvinnu og sjálfstæðum verkefnum</li>
+                <li>Lausnamiðuð hugsun og frumkvæði</li>
+              </ul>
+            </div>
+          </section>
+
+          <!-- Tungumál -->
+          <section>
+            <div class="section-header">
+              <h2>Tungumál</h2>
+            </div>
+
+            <article class="item">
+              <div class="item-header">
+                <div class="item-title">Íslenska</div>
+                <div class="item-meta">Móðurmál</div>
+              </div>
+            </article>
+
+            <article class="item">
+              <div class="item-header">
+                <div class="item-title">Enska</div>
+                <div class="item-meta">Mjög góð</div>
+              </div>
+            </article>
+
+            <article class="item">
+              <div class="item-header">
+                <div class="item-title">Danska</div>
+                <div class="item-meta">Með stúdentspróf, ágæt</div>
+              </div>
+            </article>
+          </section>
+
+          <!-- Skólastarfsemi -->
+          <section>
+            <div class="section-header">
+              <h2>Nefndarstörf við Verslunarskóla Íslands</h2>
+            </div>
+
+
+
+            <article class="item">
+              <div class="item-title">Nefndarstörf</div>
+              <div class="item-desc">
+               Formaður blaðanefndar Kvasis, Nefndameðlimur, markaðssetningarstjóri og svo formaður Nemendamótsnefndar VÍ, Stjórnarmeðlimur og kjörstjórnarmeðlimur nemendfélags Verslunarskóla Íslands (NFVI)
+              </div>
+            </article>
+          </section>
+        </div>
+      </div>
+
+      <div class="footer-note">
+        Meðmælendur veittir sé þess óskað.
+      </div>
+    </div>
+  </main>
+</body>
+</html>
